@@ -14,10 +14,4 @@ import javax.inject.Inject
 @HiltViewModel
 class MainViewModel @Inject constructor(private val repository: MainRepository) : BaseViewModel() {
 
-    fun getUsers() {
-        viewModelScope.launch {
-            val numbers = repository.getNumber()
-        }
-    }
-
 }
