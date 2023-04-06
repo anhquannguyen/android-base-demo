@@ -1,4 +1,4 @@
-package com.example.base_demo
+package com.example.base_demo.ui.main
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.navOptions
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
+import com.example.base_demo.R
 import com.example.base_demo.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -24,7 +25,6 @@ class MainActivity : AppCompatActivity(), NavController.OnDestinationChangedList
                 navController.addOnDestinationChangedListener(this@MainActivity)
                 toolbar.setupWithNavController(navController, AppBarConfiguration(topLevelDestinations))
             }
-
         }
     }
 
