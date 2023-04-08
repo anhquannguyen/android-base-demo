@@ -17,4 +17,8 @@ object RoomModule {
     fun provideDatabase(
         app: Application
     ) = Room.databaseBuilder(app, AppDatabase::class.java, "code_scan_database").build()
+
+    @Provides
+    @Singleton
+    fun provideHistoryDao(database: AppDatabase) = database.historyDao()
 }
